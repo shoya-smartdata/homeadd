@@ -7,7 +7,7 @@ const router = express.Router();
 
 // Endpoint for requesting a consultation
 // router.post('/consultation', authMiddleware, upload.single('image'), requestConsultation);
-router.post('/consultation', authMiddleware, upload.single('image'), requestConsultation);
+router.post('/consultation', authMiddleware, upload.single('images'), requestConsultation);
 
 
 // Endpoint for tracking status of a consultation

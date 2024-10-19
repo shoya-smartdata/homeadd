@@ -1,4 +1,5 @@
 import Consultation from "../Models/consultationSchema.js";
+import Doctor from "../Models/doctorSchema.js";
 
 // View Consultation Requests
 export const viewRequests = async (req, res) => {

@@ -3,15 +3,14 @@ import Consultation from '../Models/consultationSchema.js';
 // Request a Consultation
 export const requestConsultation = async (req, res) => {
     const { doctorId, timeSlot } = req.body;
-    const patientId = req.user.id; // Ensure req.user is populated correctly by authMiddleware
+    const patientId = req.user.id; 
   
     try {
-      // Check if a file is uploaded
+   
       if (!req.file) {
         return res.status(400).json({ error: 'Please upload an image of the skin condition.' });
       }
   
-      // Validate required fields
       if (!doctorId || !timeSlot) {
         return res.status(400).json({ error: 'Doctor ID and time slot are required.' });
       }
